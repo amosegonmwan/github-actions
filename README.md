@@ -92,6 +92,7 @@ jobs:
 
 The "Handle issues" workflow is triggered on issues created in the main branch. It contains a single job named "output-info" that runs on an Ubuntu environment. The job outputs information about the GitHub issue event, providing details about the issue created.
 
+```yaml
 name: Handle issues
 
 on: 
@@ -105,6 +106,5 @@ jobs:
     steps:
       - name: Output event details
         run: echo "${{ toJson(github.event) }}"
-
-
+```
 
